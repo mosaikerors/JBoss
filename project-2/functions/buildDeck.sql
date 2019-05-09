@@ -26,7 +26,7 @@ begin
     
     # 检查是否重名
     select count(distinct(card_name)) from check_name into distinct_name_num;
-    if (distinct_name_num = 3) then
+    if (distinct_name_num = 30) then
 		# 要先插入deck
         select count(deckId) + 1 into deck_id 
 			from deck 
